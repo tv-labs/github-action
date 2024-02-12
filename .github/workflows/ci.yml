@@ -56,6 +56,7 @@ jobs:
         uses: ./
         with:
           apikey: 12345
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print Output
         id: output
