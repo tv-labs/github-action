@@ -1,0 +1,11 @@
+name: "Run TV Labs CLI"
+description: "Runs TV Labs CLI and comments the results on the PR"
+
+inputs:
+  github-token:
+    description: "GitHub Token"
+    required: true
+
+runs:
+  using: "node12"
+  main: "index.js"
