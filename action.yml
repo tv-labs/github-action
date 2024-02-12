@@ -1,11 +1,23 @@
-name: "Run TV Labs CLI"
-description: "Runs TV Labs CLI and comments the results on the PR"
+name: "tvlabs"
+description: 'GitHub Action for running TV Labs end-to-end tests'
+author: 'TV Labs Ltd.'
 
 inputs:
+  apikey:
+    description: "TV Labs API key"
+    required: true
   github-token:
     description: "GitHub Token"
     required: true
 
+outputs:
+  resultsUrl:
+    description: 'TV Labs Cloud URL if the run was recorded'
+
 runs:
-  using: "node12"
-  main: "index.js"
+  using: node20
+  main: dist/index.js
+
+branding:
+  color: 'green'
+  icon: 'check-square'
